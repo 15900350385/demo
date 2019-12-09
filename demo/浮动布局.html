@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style>
+       *{
+            padding: 0;
+            margin: 0;
+        }
+        /*设置最大盒子的样式*/
+        #all{
+            width: 1190px;
+            height: 480px;
+            border: solid 1px red;
+        }
+        /*设置其中一部分的盒子样式*/
+        #all .a{
+            width: 190px;
+            height: 470px;
+            border: blue solid 1px;
+        }
+        #all .a ul{
+            width: 190px;
+            list-style: none;
+            float: left;
+            overflow: hidden;
+
+        }
+       /*设置字体位于正中位置*/
+        #all .a ul li{
+            height: 25px;
+            border-bottom: black solid 1px;
+            line-height: 25px;
+           padding-left: 20px;
+            padding-top: 5px;
+        }
+        #all .b{
+            width: 590px;
+            height: 470px;
+            border: 1px solid ;
+            margin-left: 10px;
+        }
+        #all .a,#all .b {
+          float: left;
+        }
+        #all .c ul{
+            list-style: none;
+            margin-left: 10px;
+        }
+        #all .c ul li{
+            width: 190px;
+            height: 150px;
+            border: 1px solid;
+            margin-bottom: 10px;
+        }
+        #all .c,#all .b{
+            float: left;
+        }
+        #all .d{
+            width: 190px;
+            height: 480px;
+            border: solid red 1px;
+            margin-left: 2px;
+        }
+        #all .c,#all .d{
+            float: left;
+        }
+
+
+
+
+    </style>
+<body>
+    <div id="all">
+        <div class="a">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>44</li>
+                <li>66</li>
+            </ul>
+        </div>
+        <div class="b">
+            <img src="../img/20191127122532190344.jpg" style=" width: 590px ;height: 470px" ;>
+        </div>
+        <div class="c">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="d">
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

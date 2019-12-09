@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*设置整个盒子的大小，并超出隐藏*/
+        #a{height: 260px;
+            width: 1190px;
+            border: solid red 1px;
+            overflow: hidden;
+        }
+        /*设置标签列表的样式为无，并设置边框的距离*/
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        /*设置每个li的大小并使其转变为行内块元素*/
+        li{
+            width: 200px;
+            height: 260px;
+            /*border: aqua 1px solid;*/
+            float: left;
+            background-color: white;
+        }
+        /*设置第一个li的大小并为其设置背景，字体的大小，颜色和文本居中*/
+        .a{
+            width: 190px;
+            height: 260px;
+            /*border: black 1px solid;*/
+            background-color: coral;
+            background-image: url("https://misc.360buyimg.com/mtd/pc/index_2019/1.0.0/assets/img/4a15d8883775742e3efbb850ae14def7.png");
+            font-size: 35px;
+            color: white;
+            padding-top: 25px;
+            vertical-align: top;
+            text-align: center;
+        }
+        /*设置第二个字体的大小和边框的距离*/
+        .b{
+            font-size: 15px;
+            padding-top: 90px;
+        }
+        /*设置第二个li的图片的位置*/
+        .c{
+            text-align: center;
+            padding-top: 35px;
+        }
+        /*设置第二个li字体的样式 ：超出隐藏 空白不换行 超出的部分以省略号表示*/
+        .d{
+            width: 190px;
+            height: 23px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            white-space: nowrap;
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        /*设置a标签的样式为：去掉下划线，颜色*/
+        a{
+            text-decoration-line: none;
+            color: darkcyan;
+        /*设置底部字体的样式和边框之间的距离*/
+        }
+        .e{
+            width: 180px;
+            height: 20px;
+            border: solid coral 1px;
+            align: center;
+            margin: 10px;
+            background-color: red;
+
+        }
+
+        .f{
+            text-align: center;
+            padding-top: 45px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="a">
+        <ul>
+            <li class="a" >
+               <div>京东秒杀</div> <div class="b"><strong>16:00</strong>点场 倒计时</div>
+            </li>
+            <li> <div class="c"><img src="https://img10.360buyimg.com/mobilecms/s140x140_jfs/t1/36931/32/5724/220825/5cc01c42E61f8d052/74f1ed6c195668e4.jpg.webp"></div>
+                <div class="d"><a href="https://miaosha.jd.com/#100005274306">中兴 ZTE 天机 Axon 10 Pro 4800万超广角AI三摄 8GB+256GB 蓝色 骁龙855 全网通4G双卡双待 游戏曲面屏手机</a></div>
+                <div class="e" >$1999.00</div>
+            </li>
+            <li>
+                <div class="c"><img src="https://img11.360buyimg.com/mobilecms/s140x140_jfs/t1/66637/35/15991/83067/5ddb680aEab2ad626/918da3ed08f13c0d.jpg.webp"></div>
+                <div class="d"><a href="https://miaosha.jd.com/#27156324216"> 新日（Sunra）电动车 新国标电动自行车 男女成人电瓶车 小型轻便迷你代步车双摇控 米粒铅酸版 海棠红【新国标版】升级后靠背</a></div>
+                <div class="e">$2999.00</div> cc
+            </li>
+            <li>
+                <div class="c"><img src="https://img14.360buyimg.com/mobilecms/s140x140_jfs/t1/95727/9/3619/125226/5de0cde4E465428a0/9db99f2bb79caaad.jpg.webp"></div>
+                <div class="d"><a href="https://miaosha.jd.com/#100003909373"> 宏碁(Acer) 暗影骑士游戏台式机N50-N92 吃鸡游戏电脑主机(九代i5-9400 8G 256G SSD+1T GTX1650 4G Win10)</a> </div>
+                <div class="e">$3966.00</div>
+            </li>
+            <li>
+                <div class="c"><img src="https://img14.360buyimg.com/mobilecms/s140x140_jfs/t1/54860/2/13539/29274/5da599c3E63995fa9/7449c46508a34454.jpg.webp"></div>
+                <div class="d"><a href="https://miaosha.jd.com/#100001164022">京选20000毫安时充电宝 两万毫安快充移动电源 20000mAh充电宝 SP803 大容量多接口 双USB接口+Type-C双向输入/输出接口+Micro USB安卓接口"</a> </div>
+                <div class="e">$59.00</div>
+            </li>
+            <li>
+                <div class="f"><img src="https://img30.360buyimg.com/mobilecms/s130x130_jfs/t1/53585/10/13803/302341/5daa8681Ec78812c3/d39d6d1e66811016.png.webp"></div>
+                <div class="d"><a href="https://miaosha.jd.com/pinpailist.html?brand_id=60980&sku_id=2548547">台式机秒杀专场</a> </div>
+                <div class="e"> $9134.00</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

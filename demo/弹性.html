@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #a{
+            width: 1190px;
+            height: 200px;
+            border: solid 1px red;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+
+        }
+        #a div{
+            width: 234px;
+            height: 92px;
+            border: solid 1px red;
+            /*align-content: space-between;*/
+
+        }
+        #a div:nth-child(2)
+        {
+            width: 600px;
+            height: 92px;
+            border: solid 1px blue;
+        }
+        ul{
+            width: 234px;
+            height: 92px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            /*align-content: space-between;*/
+        }
+        ul li{
+            width: 110px;
+            height: 40px;
+            border: solid 1px red;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

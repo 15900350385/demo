@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    <!--设置的相邻选择器-->
+    th,td{
+        border: solid 1px red;
+
+    }
+    /*设置的父子选择器*/
+    thead th{
+        border: solid 1px blue;
+    }
+    /*单独的选择器 优先级没有父子选择器高*/
+    th{
+        border: solid 1px orchid;
+    }
+    /*设置边界为word形式*/
+    table{
+        border-collapse: collapse;
+    }
+</style>
+<body>
+    <table border="1">
+        <thead>
+
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+
+        </thead>
+        <tbody>
+
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+
+        </tbody>
+    </table>
+</body>
+</html>
