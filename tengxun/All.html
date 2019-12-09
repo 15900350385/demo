@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1,viewport-fit=cover">
+    <title>腾讯视频</title>
+    <link href="../css/iconfont.css" type="text/css" rel="stylesheet">
+</head>
+    <style>
+        /*<!--去点所有的边框-->*/
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /*<!--设置主体盒子的宽度为100 高度不用设置 内容自己撑开-->*/
+        #app{
+            width: 100%;
+            /*border: 1px solid crimson;*/
+        }
+        #app #wrap{
+            margin: 0;
+            position: relative;
+            top: 0;
+            width: 100%;
+            height: 110px;
+
+        }
+        /*设置第一部分的盒子的大小*/
+        #app #one{
+            width: 100%;
+            height: 93px;
+            position: fixed;
+            z-index: 100;
+            background: white;
+            /*border: 1px solid black;*/
+        }
+        /*第一部分中两个盒子的分布大小 第一部分*/
+        #app #one .a{
+            margin-top: 10px;
+            width: 100%;
+            height: 48%;
+            /*border: 1px solid black;*/
+        }
+        /*第一部分中a标签离边框的距离*/
+        #app #one .a span:nth-child(1){
+            padding-left: 5%;
+        }
+        #app #one .a span:nth-child(2){
+            padding-left: 3%;
+            padding-top: 10px;
+        }
+        #app #one .a span:nth-child(3){
+            padding-left: 15%;
+        }
+        /*第二部分*/
+        #app #one .b{
+            width: 100%;
+            height: 52%;
+            /*border: 1px solid black;*/
+            display: flex;
+        }
+        /*第二个盒子中div的大小*/
+        #app #one .b div{
+            width: 14.28%;
+            height: 85%;
+            /*background: red;*/
+        }
+        /*盒子中元素的左边距*/
+        #app #one .b div a{
+           margin-left: 10%;
+        }
+        /*所有a标签进行去掉下划线 和颜色变黑*/
+        a{
+            text-decoration-line: none;
+            color: #222222;
+        }
+        #app #two{
+            width: 100%;
+            height:250px;
+            /*border: 1px solid cyan;*/
+        }
+        /*第二部分中第一个盒子元素*/
+        #app #two .a{
+            width: 90%;
+            height: 193px;
+            /*background: red;*/
+            margin: auto;
+        }
+        /*第二部分中第二个盒子元素*/
+        #app #two .b{
+            width: 90%;
+            height: 46px;
+            margin: auto;
+            /*background: #55a532;*/
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            position: relative;
+            top: 15px;
+        }
+        #app #two .b a{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        #app #three {
+            width: 100%;
+            height: 205px;
+            /*border: 1px solid chocolate;*/
+        }
+        #app #three .a{
+            width: 90%;
+            height: 22px;
+            margin: auto;
+            /*background: #63a35c;*/
+        }
+        b{
+            font-size: 20px;
+        }
+        #app #three .b{
+            padding-top: 10px;
+            width: 90%;
+            height: 154px;
+            /*background: #795da3;*/
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        #app #three .b div{
+            width: 48%;
+            height: 30%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: flex;
+            /*background: red;*/
+        }
+        #app #three .b div:nth-child(1){
+            height: 65%;
+        }
+        #app #three .b div:nth-child(2) {
+            height: 65%;
+        }
+        #app #three .b div:nth-child(3) {
+            height: 15%;
+        }
+        #app #three .b div:nth-child(4) {
+            height: 15%;
+        }
+        #app #three .b div:nth-child(5) {
+            height: 15%;
+        }
+        #app #three .b div:nth-child(6) {
+            height: 15%;
+        }
+        #app #four .l{
+            width: 100%;
+            height: 556px;
+        }
+        #app #four .l .a{
+            width: 90%;
+            height: 22px;
+            /*background: red;*/
+            margin: auto;
+        }
+        #app #four .l .b{
+           padding-top: 10px;
+            width: 90%;
+            height: 506px;
+            /*background: #55a532;*/
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        #app #four .l .b div{
+            width: 48%;
+            height: 30%;
+            /*background: red;*/
+        }
+        #app #four .l .b div .o:nth-child(1){
+            width: 100%;
+            height: 70%;
+            /*background: #222222;*/
+        }#app
+        #four .l .b div .o:nth-child(2){
+             width: 151px;
+             height: 15%;
+             /*background: #222222;*/
+         }
+        #app #four .l .b div .o:nth-child(3){
+            width: 151px;
+            height: 15%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            /*background: #222222;*/
+        }
+        #two #r a{
+            width: 10px;
+            height: 10px;
+            position: relative;
+            left: 220px;
+            top: 180px;
+            background: red;
+            /*position: absolute;*/
+            float: left;
+            margin-left: 15px;
+            border-radius: 50%;
+        }
+        #two #p{
+
+            width: 100%;
+            height:100%;
+        }
+        #two #p #c{
+            /*position: relative;*/
+            width: 100%;
+            height: 100%;
+        }
+        #c img{
+            position: absolute;
+            z-index: -20;
+        }
+        #two #r{
+            position: absolute;
+        }
+        .p{
+            display: none;
+        }
+        :target{
+            display: block;
+        }
+        #app #five .l{
+            width: 100%;
+            height: 580px;
+        }
+        #app #five .l .a{
+            width: 90%;
+            height: 22px;
+            /*background: red;*/
+            margin: auto;
+        }
+        #app #five .l .b{
+            padding-top: 10px;
+            width: 90%;
+            height: 506px;
+            /*background: #55a532;*/
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        #app #five .l .b div{
+            width: 48%;
+            height: 30%;
+            /*background: red;*/
+        }
+        #app #five .o{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        #app #five .l .b div .o:nth-child(1){
+            width: 100%;
+            height: 70%;
+            /*background: #222222;*/
+        }
+        #app #five .l .b div .o:nth-child(2){
+             width: 151px;
+             height: 15%;
+             /*background: #222222;*/
+         }
+        #app #five .l .b div .o:nth-child(3){
+            width: 151px;
+            height: 15%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            /*background: #222222;*/
+        }
+        #app #six{
+            width: 100%;
+            height: 809px;
+            /*border: solid 1px blue;*/
+        }
+        #app #six .a{
+             width: 100%;
+             height: 22px;
+             /*background: #222222;*/
+            margin-left: 15px;
+
+         }
+        #app #six .b{
+            width: 100%;
+            height: 850px;
+           /*margin: auto;*/
+            margin-top: 10px;
+            /*background: #55a532;*/
+        }
+        #app #six .b .a{
+            width: 90%;
+            height: 241px;
+            margin: auto;
+            /*background: #666666;*/
+        }
+        #app #six .b .a div:nth-child(1){
+            width: 100%;
+            height: 193px;
+            /*background: #0077aa;*/
+
+        }
+        #app #six .b .a div:nth-child(2){
+            width: 100%;
+            height: 20px;
+            margin-top: 10px;
+            /*background: #ee9900;*/
+        }
+        #app #six .b .a div:nth-child(3){
+            width: 100%;
+            height: 20px;
+            margin-top: 10px;
+            /*background: #222222;*/
+        }
+        #app #six .b .b{
+            width: 90%;
+            margin: auto;
+            height: 300px;
+            /*background: #795da3;*/
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+        #app #six .b .b div{
+            width: 46%;
+            height: 46%;
+            /*background: #ee9900;*/
+        }
+        #app #six .b .b .o{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: 10px;
+        }
+
+
+
+    </style>
+<body>
+    <div id="app">
+        <div id="wrap">
+        <div id="one">
+            <div class="a">
+                <span class="a"><a href="https://v.qq.com/"><img src="../img/腾讯视频.png" ></a></span>
+                <span><a href="https://v.qq.com/">腾讯视频</a></span>
+                <span><input type="text" class="iconfont" placeholder="庆余年                  &#xe631;" style="border-radius: 20px ;height: 25px ;"  ></span>
+            </div>
+            <div class="b">
+                <div>
+                    <a href="" >精选</a>
+                </div>
+                <div>
+                    <a href="">电视剧</a>
+
+                </div>
+                <div>
+                    <a href="" >&nbsp;&nbsp;VIP</a>
+
+                </div>
+                <div>
+                    <a href=""> 电影</a>
+                </div>
+                <div>
+                    <a href=""> 综艺</a>
+                </div>
+                <div>
+                    <a href=""> 动漫</a>
+                </div>
+                <div>
+                    <a href=""> 少儿</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="two">
+            <div class="a">
+                <div id="p">
+                    <div id="r">
+                        <a href="#q"></a>
+                        <a href="#w"></a>
+                        <a href="#y"></a>
+                    </div>
+                    <div id="c">
+                        <img src="http://puui.qpic.cn/tv/0/421967035_1080607/0" width="337.5px" height="193px" id="q" class="p">
+                        <img src="http://puui.qpic.cn/tv/0/420572643_1080607/0" width="337.5px" height="193px" id="w" class="p">
+                        <a href=""><img src="http://puui.qpic.cn/tv/0/418153941_1080607/0" width="337.5px" height="193px" id="y" class="p"></a>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="b">
+                <a href="view.html">【庆余年·好剧热播】张若昀演技炸裂！拿下首杀 </a>
+            </div>
+        </div>
+        <div id="three">
+            <div class="a">
+                <a href=""><b>猜你喜欢</b></a>
+            </div>
+            <div class="b">
+                <div>
+                    <a href=""><IMG src="http://puui.qpic.cn/vcover_hz_pic/0/mzc00200cmkyse61573531802/0"  style="width: 100% ;height: 100%;"></a>
+                </div>
+                <div>
+                    <a href=""> <img src="http://puui.qpic.cn/vcover_hz_pic/0/mzc00200tuzufsa1573025684/0" style="width: 100% ;height: 100%;"></a>
+                </div>
+                <div>
+                    <a href=""> 从前有座灵剑山</a>
+                </div>
+                <div>
+                    <a href="">河山</a>
+                </div>
+                <div>
+                    <a href="">许凯张榕容爆笑反套路试炼</a>
+                </div>
+                <div>
+                    <a href="">秦海璐王新军热血抗战</a>
+                </div>
+            </div>
+        </div>
+        <div id="four">
+            <div class="l">
+                <div class="a">
+                    <a href=""><b>重磅✨殿下大人·定档12月7日</b></a>
+                </div>
+                <div class="b">
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/415996969_498280/0" width="100%" height="100%" ></a>
+                        </div>
+                        <div class="o">
+                            <a href="">中国机长✈热播</a>
+                        </div>
+                        <div class="o">
+                            <a href="">张涵予重现英雄机长壮举！</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/vcover_hz_pic/0/dh1fyeb58mn9mqt1550130512/0" width="100%" height="100%"></a>
+                        </div>
+                        <div class="o">
+                            <a href="">陈情令团综·首播</a>
+                        </div>
+                        <div class="o">
+                            <a href="">肖战王一博演唱会排练幕后</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/416976204_498280/0" width="100%" height="100%"></a>
+
+                        </div>
+                        <div class="o">
+                            <a href="">心动的offer·几个月了</a>
+                        </div>
+                        <div class="o">
+                            <a href="">沈梦辰摸papi孕肚借好运</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/418012015_498280/0" width="100%" height="100%"></a>
+
+                        </div>
+                        <div class="o">
+                            <a href="">熊出没之探险日记2</a>
+                        </div>
+                        <div class="o">
+                            <a href="">松鼠发明比人类厉害吗？</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/404839341_498280/0" width="100%" height="100%"></a>
+                        </div>
+                        <div class="o">
+                            <a href="">超级小熊布迷 第二季</a>
+                        </div>
+                        <div class="o">
+                            <a href="">新朋友和新对手出现了！</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/416229979_498280/0" width="100%" height="100%"></a>
+                        </div>
+                        <div class="o">
+                            <a href="">西行纪·更新</a>
+                        </div>
+                        <div class="o">
+                            <a href="">力破封印，解救孙悟空</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="five">
+            <div class="l">
+                <div class="a">
+                    <a href=""><b>少儿精选剧场和综艺节目</b></a>
+                </div>
+                <div class="b">
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/420072318_498280/0" width="100%" height="100%" ></a>
+                        </div>
+                        <div class="o">
+                            <a href="">贝肯熊第4季</a>
+                        </div>
+                        <div class="o" >
+                            <a href="">倒霉熊爆笑回归</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/391568198_498280/0" width="100%" height="100%"></a>
+                        </div>
+                        <div class="o">
+                            <a href="">超级飞侠 第七季</a>
+                        </div>
+                        <div class="o">
+                            <a href="">超级装备全新精彩启程</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/421005564_498280/0" width="100%" height="100%"></a>
+
+                        </div>
+                        <div class="o">
+                            <a href="">美食告白记3·策划</a>
+                        </div>
+                        <div class="o">
+                            <a href="">邓超鹿晗抢食陈赫看呆</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/421107788_498280/0" width="100%" height="100%"></a>
+
+                        </div>
+                        <div class="o">
+                            <a href="">舞蹈风暴</a>
+                        </div>
+                        <div class="o">
+                            <a href="">热巴赵丽颖跳周杰伦名曲</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/404364302_498280/0" width="100%" height="100%"></a>
+                        </div>
+                        <div class="o">
+                            <a href="">喜剧大咖</a>
+                        </div>
+                        <div class="o">
+                            <a href="">宋小宝变抢劫犯巧遇赵本山</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="o">
+                            <a href=""><img src="http://puui.qpic.cn/tv/0/405125052_498280/0" width="100%" height="100%"></a>
+                        </div>
+                        <div class="o">
+                            <a href="">9岁中国女孩惊呆</a>
+                        </div>
+                        <div class="o">
+                            <a href="">刚场爆灯直接晋级唱几句全</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="six">
+            <div class="a">
+                <b>电影大片</b>
+            </div>
+            <div class="b">
+                <div class="a">
+                    <div ><img src="http://puui.qpic.cn/tv/0/420496832_1080607/0" height="100%" width="100%"></div>
+                    <div >追凶十九年·独播</div>
+                    <div >王泷正宋宁峰跨世纪侦案</div>
+                </div>
+                <div class="b">
+                    <div>
+                        <div style="width: 100% ;height: 65%" ><img src="http://puui.qpic.cn/tv/0/420497912_498280/0" height="100%" width="100%"></div>
+                        <div style="width: 100%; height: 15%"> 催眠·裁决</div>
+                        <div class="o"  style="width: 100%; height: 15%">张翰天台搏命对打彪悍绑匪</div>
+                    </div>
+                    <div>
+                        <div style="width: 100% ;height: 65%" ><img src="http://puui.qpic.cn/tv/0/418561965_498280/0" height="100%" width="100%"></div>
+                        <div style="width: 100%; height: 15%"> 中国机长·震撼首播</div>
+                        <div class="o"  style="width: 100%; height: 15%">张涵予重现英雄机长壮举！</div>
+                    </div>
+                    <div>
+                        <div style="width: 100% ;height: 65%" ><img src="http://puui.qpic.cn/tv/0/419956279_498280/0" height="100%" width="100%"></div>
+                        <div style="width: 100%; height: 15%">噪乐江湖 </div>
+                        <div class="o" style="width: 100%; height: 15%">燃爆！五指琴魔怒怼鬼鼓</div>
+                    </div>
+                    <div>
+                        <div style="width: 100% ;height: 65%" ><img src="http://puui.qpic.cn/tv/0/401397065_498280/0" height="100%" width="100%"></div>
+                        <div style="width: 100%; height: 15%">少年的你·全网首播 </div>
+                        <div class="o" style="width: 100%; height: 15%">千玺陪周冬雨剃寸头A炸了</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
