@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrap{
+            width: 600px;
+            height: 600px;
+            border: 1px solid red;
+            margin: auto;
+            perspective: 1000px;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            margin: auto;
+            margin-top: 200px;
+            transform-style: preserve-3d;
+        }
+        #box div{
+            width: 200px;
+            height: 200px;
+            border-width: 1px;
+            border-style: solid;
+            position: absolute;
+        }
+        #box .a{
+              transform: translateX(200px) rotateY(-90deg);
+              transform-origin: left;
+          }
+        #box .b{
+            transform: translateX(-200px) rotateY(90deg);
+            transform-origin: right;
+        }
+        #box .c{
+            transform: translateY(200px) rotateX(90deg);
+            transform-origin: top;
+        }
+        #box .d{
+            transform: translateY(-200px) rotateX(-90deg);
+            transform-origin:bottom;
+        }
+        #box .d{
+            transform: translateZ(200px);
+        }
+        #box:hover{
+            transform: rotateY(360deg);
+            transition-duration: 4s;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box">
+            <div style="border-color: #ee9900" class="a">
+                <img src="../haozhi1/51c9ab925cf9990b9ff87661c6753fe.jpg" width="100%" height="100%">
+            </div>
+            <div style="border-color: red" class="b">
+                <img src="../haozhi1/50140b7307b11ab82f6d9a901540c19.jpg" width="100%" height="100%">
+            </div>
+            <div style="border-color: #0086b3" class="c">
+                <img src="../haozhi1/b5cf2807177fd4bf20ac67c10a52073.jpg" width="100%" height="100%">
+            </div>
+            <div style="border-color: #df5000" class="d">
+                <img src="../haozhi1/e5b387a59970122404e3f22907c558c.jpg" width="100%" height="100%">
+            </div>
+            <div style="border-color: #795da3" class="e">
+                <img src="../haozhi1/e948dd7b8fd41a8cbf66d7d5004683a.jpg" width="100%" height="100%">
+            </div>
+            <div style="border-color: cyan" class="f">
+                <img src="../haozhi1/f6d6f4b894f796cbd4963a96f993efd.jpg" width="100%" height="100%">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
